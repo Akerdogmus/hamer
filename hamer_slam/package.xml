@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>hamer_slam</name>
+  <version>1.0.0</version>
+  <description>
+    The hamer_slam package provides roslaunch scripts for starting the SLAM.
+  </description>
+  <license>TODO</license>
+  <author email="akerdogmus@gmail.com">AKE</author>
+  <maintainer email="akerdogmus@gmail.com">AKE</maintainer>
+  <url type="repository">https://github.com/Akerdogmus/hamer</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <!--<exec_depend>hamer_bringup</exec_depend>-->
+  <exec_depend>slam_gmapping</exec_depend>
+  <!--<exec_depend>cartographer</exec_depend>
+  <exec_depend>cartographer_ros</exec_depend>
+  <exec_depend>cartographer_ros_msgs</exec_depend>
+  <exec_depend>cartographer_rviz</exec_depend>
+  <exec_depend>hector_mapping</exec_depend>
+  <exec_depend>slam_karto</exec_depend>
+  <exec_depend>frontier_exploration</exec_depend>
+  <exec_depend>navigation_stage</exec_depend> -->
+</package>

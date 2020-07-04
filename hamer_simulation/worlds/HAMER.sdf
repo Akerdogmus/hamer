@@ -1,0 +1,4929 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="square_world">
+    
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>51.9906340</latitude_deg>
+      <longitude_deg>4.3767889</longitude_deg>
+      <elevation>45.110</elevation>
+      <heading_deg>180</heading_deg>
+    </spherical_coordinates>
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <gui fullscreen="0">
+      <camera name="user_camera">
+        <pose>1.49016 -3.72367 3.62379 -2.88294e-17 0.273797 1.4042</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>0</shadows>
+      <grid>0</grid>
+    </scene>
+    <model name="floor">
+      <static>1</static>
+      <pose>-5.99 0 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>14.34 32.2</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name="visual">
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>14.36 32.2</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/White</name>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+   
+    <model name="wall1">
+      <static>true</static>
+      <pose>1.18 0 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>32.2 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>32.2 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>  
+    <model name="wall3">
+      <static>true</static>
+      <pose>-7.17 11.525 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+   <model name="wall4">
+      <static>true</static>
+      <pose>0 -16.10 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>2.36 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>2.36 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall5">
+      <static>true</static>
+      <pose>-6.05 16.1 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>14.46 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>14.46 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <model name="wall6">
+      <static>true</static>
+      <pose>-13.28 13.8125 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>4.575 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>4.575 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall7">
+      <static>true</static>
+      <pose>1.0315 -16.10 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall8">
+      <static>true</static>
+      <pose>1.0315 -14.86 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall9">
+      <static>true</static>
+      <pose>0.883 -15.48 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.24 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.24 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall10">
+      <static>true</static>
+      <pose>1.035 -10.1 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.29 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.29 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall11">
+      <static>true</static>
+      <pose>1.035 -8.28 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.29 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.29 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall12">
+      <static>true</static>
+      <pose>0.89 -9.19 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.82 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.82 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall13">
+      <static>true</static>
+      <pose>1.0365 -6.34 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.287 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.287 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall14">
+      <static>true</static>
+      <pose>1.0365 -5.03 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.287 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.287 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall15">
+      <static>true</static>
+      <pose>0.893 -5.685 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.31 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.31 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall16">
+      <static>true</static>
+      <pose>1.0195 -0.42 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.321 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.321 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall17">
+      <static>true</static>
+      <pose>1.0195 0.65 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.321 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.321 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall18">
+      <static>true</static>
+      <pose>0.859 0.115 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall19">
+      <static>true</static>
+      <pose>1.04 5.41 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.28 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.28 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall20">
+      <static>true</static>
+      <pose>1.04 6.64 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.28 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.28 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall21">
+      <static>true</static>
+      <pose>0.859 6.025 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.9 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.9 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall22">
+      <static>true</static>
+      <pose>1.0315 11.31 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall23">
+      <static>true</static>
+      <pose>1.0315 12.65 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.297 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall24">
+      <static>true</static>
+      <pose>0.883 11.98 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall25">
+      <static>true</static>
+      <pose>0.87 15.48 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.58 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.58 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall26">
+      <static>true</static>
+      <pose>0.6 15.79 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.62 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.62 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall27">
+      <static>true</static>
+      <pose>-0.01 15.787 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.626 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.626 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall28">
+      <static>true</static>
+      <pose>-1.24 15.787 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.626 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.626 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall29">
+      <static>true</static>
+      <pose>-0.625 15.474 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.23 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.23 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall30">
+      <static>true</static>
+      <pose>-5.37 15.86 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.48 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.48 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall31">
+      <static>true</static>
+      <pose>-6.63 15.86 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.48 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.48 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall32">
+      <static>true</static>
+      <pose>-6 15.62 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.26 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.26 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall33">
+      <static>true</static>
+      <pose>-8.09 15.85 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.50 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.50 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall34">
+      <static>true</static>
+      <pose>-9.33 15.85 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.50 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.50 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall35">
+      <static>true</static>
+      <pose>-8.71 15.6 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.24 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.24 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall36">
+      <static>true</static>
+      <pose>-10.82 15.69 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.82 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.82 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall37">
+      <static>true</static>
+      <pose>-12.02 15.69 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.82 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.82 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall38">
+      <static>true</static>
+      <pose>-11.42 15.28 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.20 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.20 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall39">
+      <static>true</static>
+      <pose>-5.18 11.8025 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.555 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.555 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall40">
+      <static>true</static>
+      <pose>-6.4 11.8025 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.555 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.555 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall41">
+      <static>true</static>
+      <pose>-5.79 12.08 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.22 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.22 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall42">
+      <static>true</static>
+      <pose>-7.72 11.7775 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.505 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.505 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall43">
+      <static>true</static>
+      <pose>-8.94 11.7775 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.505 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.505 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall44">
+      <static>true</static>
+      <pose>-8.33 12.03 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.22 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.22 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name> Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall45">
+      <static>true</static>
+      <pose>-1.18 -9.58 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>13.04 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>13.04 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall46">
+      <static>true</static>
+      <pose>-1.18 1.62 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>5.9 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>5.9 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall47">
+      <static>true</static>
+      <pose>-1.18 8.91 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>5.22 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>5.22 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+   <model name="wall48">
+      <static>true</static>
+      <pose>-7.17 3.12 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall49">
+      <static>true</static>
+      <pose>-13.205 -1.97 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>10.18 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>10.18 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall50">
+      <static>true</static>
+      <pose>-7.17 -7.06 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <!-- <model name="wall50">
+      <static>true</static>
+      <pose>-3.7825 -7.06 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>5.205 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>5.205 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall52">
+      <static>true</static>
+      <pose>-8.6825 -7.06 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.135 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.135 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall53">
+      <static>true</static>
+      <pose>-9.8175 -7.06 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.135 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.135 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall54">
+      <static>true</static>
+      <pose>-12.6825 -7.06 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.135 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.135 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall55">
+      <static>true</static>
+      <pose>-5.25 -10.06 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>6 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>6 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall56">
+      <static>true</static>
+      <pose>-9.25 -10.06 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>6 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>6 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall57">
+      <static>true</static>
+      <pose>-13.25 -10.06 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>6 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>6 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  <model name="wall58">
+      <static>true</static>
+      <pose>-7.17 -13.06 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>12.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+   <model name="wall59">
+      <static>true</static>
+      <pose>-6.215 0.575 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>4.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>4.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+ <model name="wall60">
+      <static>true</static>
+      <pose>-6.215 -1.97 1.6 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>4.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>4.07 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall61">
+      <static>true</static>
+      <pose>-4.18 -0.6975 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>2.545 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>2.454 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall62">
+      <static>true</static>
+      <pose>-8.25 -0.6975 1.6 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>2.545 0.2 3.2</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>2.545 0.2 3.2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model> -->
+  <model name='Stairs'>
+    <pose frame=''>-10.345 12.23 0 0 -0 0</pose>
+    <link name='Stairs_1'>
+      <visual name='Stairs_1_Visual_0'>
+        <pose frame=''>1.2645 0 0.0935 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_0'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>1.2645 0 0.0935 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_1'>
+        <pose frame=''>0.9835 0 0.2805 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_1'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>0.9835 0 0.2805 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_2'>
+        <pose frame=''>0.7025 0 0.4675 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_2'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>0.7025 0 0.4675 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_3'>
+        <pose frame=''>0.4215 0 0.6545 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_3'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>0.4215 0 0.6545 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_4'>
+        <pose frame=''>0.1405 0 0.8415 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_4'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>0.1405 0 0.8415 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_5'>
+        <pose frame=''>-0.1405 0 1.0285 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_5'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>-0.1405 0 1.0285 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_6'>
+        <pose frame=''>-0.4215 0 1.2155 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_6'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>-0.4215 0 1.2155 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_7'>
+        <pose frame=''>-0.7025 0 1.4025 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_7'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>-0.7025 0 1.4025 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_8'>
+        <pose frame=''>-0.9835 0 1.5895 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+              <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_8'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>-0.9835 0 1.5895 0 0 -1.5708</pose>
+      </collision>
+      <visual name='Stairs_1_Visual_9'>
+        <pose frame=''>-1.2645 0 1.7765 0 0 -1.5708</pose>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/CeilingTiled</name>
+          </script>
+          <ambient>0.760784 0.662745 0.627451 1</ambient>
+        </material>
+      </visual>
+      <collision name='Stairs_1_Collision_9'>
+        <geometry>
+          <box>
+            <size>1.41 0.281 0.187</size>
+          </box>
+        </geometry>
+        <pose frame=''>-1.2645 0 1.7765 0 0 -1.5708</pose>
+      </collision>
+    </link>
+    <static>1</static>
+  </model>
+<model name="wall488">
+      <static>true</static>
+      <pose>-1.18 -2.195 2.6425 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.73 0.2 1.115</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.73 0.2 1.115</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall498">
+      <static>true</static>
+      <pose>-1.18 5.435 2.6425 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.73 0.2 1.115</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.73 0.2 1.115</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall508">
+      <static>true</static>
+      <pose>-0.78 -1.41 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>27.78 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>27.78 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall518">
+      <static>true</static>
+      <pose>0.28 -0.21 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>30.18 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>30.18 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall528">
+      <static>true</static>
+      <pose>-0.25 -15.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.06 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.06 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall538">
+      <static>true</static>
+      <pose>-6.24 14.88 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>13.04 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>13.04 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall548">
+      <static>true</static>
+      <pose>-10.595 12.935 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>4.11 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>4.11 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall558">
+      <static>true</static>
+      <pose>-12.76 13.9075 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>1.945 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>1.945 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall5688">
+      <static>true</static>
+      <pose>-4.66 12.48 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>7.76 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>7.76 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall578">
+      <static>true</static>
+      <pose>-8.54 12.7075 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.455 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.455 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall588">
+      <static>true</static>
+      <pose>0.64 1.05 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall598">
+      <static>true</static>
+      <pose>0.64 1.65 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall608">
+      <static>true</static>
+      <pose>0.28 1.35 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall618">
+      <static>true</static>
+      <pose>1 1.35 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.600 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall638">
+      <static>true</static>
+      <pose>0.64 2.25 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall648">
+      <static>true</static>
+      <pose>0.28 1.95 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall658">
+      <static>true</static>
+      <pose>1 1.95 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.600 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall678">
+      <static>true</static>
+      <pose>0.64 2.85 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall688">
+      <static>true</static>
+      <pose>0.28 2.55 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall698">
+      <static>true</static>
+      <pose>1 2.55 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.600 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall718">
+      <static>true</static>
+      <pose>0.64 3.45 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall728">
+      <static>true</static>
+      <pose>0.28 3.15 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>12.935
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall738">
+      <static>true</static>
+      <pose>1 3.15 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall748">
+      <static>true</static>
+      <pose> 0.64 4.05 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall758">
+      <static>true</static>
+      <pose>0.28 3.75 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall768">
+      <static>true</static>
+      <pose>1 3.75 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall778">
+      <static>true</static>
+      <pose>0.64 4.65 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall788">
+      <static>true</static>
+      <pose>0.28 4.35 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall798">
+      <static>true</static>
+      <pose>1 4.35 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall808">
+      <static>true</static>
+      <pose>-6.80 12.085 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall818">
+      <static>true</static>
+      <pose>-7.40 12.085 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall828">
+      <static>true</static>
+      <pose>-7.10 11.725 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall838">
+      <static>true</static>
+      <pose>-7.10 12.445 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall848">
+      <static>true</static>
+      <pose>-10.34 12.575 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall858">
+      <static>true</static>
+      <pose>-10.94 12.575 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall868">
+      <static>true</static>
+      <pose>-10.64 12.215 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall878">
+      <static>true</static>
+      <pose>-10.64 12.935 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall898">
+      <static>true</static>
+      <pose>-11.54 12.575 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall908">
+      <static>true</static>
+      <pose>-11.24 12.215 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall918">
+      <static>true</static>
+      <pose>-11.24 12.935 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall928">
+      <static>true</static>
+      <pose>-12.14 12.575 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall938">
+      <static>true</static>
+      <pose>-11.84 12.215 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall948">
+      <static>true</static>
+      <pose>-11.84 12.935 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall958">
+      <static>true</static>
+      <pose>-12.74 12.575 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.72 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall968">
+      <static>true</static>
+      <pose>-12.44 12.215 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall978">
+      <static>true</static>
+      <pose>-12.44 12.935 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <box>
+              <size>0.60 0.05 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall988">
+      <static>true</static>
+      <pose>0.28 -12.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall998">
+      <static>true</static>
+      <pose>0.28 -9.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1008">
+      <static>true</static>
+      <pose>0.28 -6.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1018">
+      <static>true</static>
+      <pose>0.28 -3.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1028">
+      <static>true</static>
+      <pose>0.28 -0.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1038">
+      <static>true</static>
+      <pose>0.28 2.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1048">
+      <static>true</static>
+      <pose>0.28 5.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1058">
+      <static>true</static>
+      <pose>0.28 8.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1068">
+      <static>true</static>
+      <pose>0.28 11.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1078">
+      <static>true</static>
+      <pose>-0.78 -12.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1088">
+      <static>true</static>
+      <pose>-0.78 -9.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1098">
+      <static>true</static>
+      <pose>-0.78 -6.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1108">
+      <static>true</static>
+      <pose>-0.78 -3.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model><model name="wall1118">
+      <static>true</static>
+      <pose>-0.78 -0.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1128">
+      <static>true</static>
+      <pose>-0.78 2.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1138">
+      <static>true</static>
+      <pose>-0.78 5.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1148">
+      <static>true</static>
+      <pose>-0.78 8.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1158">
+      <static>true</static>
+      <pose>-0.78 11.7 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+        </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1168">
+      <static>true</static>
+      <pose>-1.72 14.88 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1178">
+      <static>true</static>
+      <pose>-3.72 14.88 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1188">
+      <static>true</static>
+      <pose>-5.72 14.88 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1198">
+      <static>true</static>
+      <pose>-7.72 14.88 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1208">
+      <static>true</static>
+      <pose>-9.72 14.88 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1228">
+      <static>true</static>
+      <pose>-1.72 12.48 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1238">
+      <static>true</static>
+      <pose>-3.72 12.48 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1248">
+      <static>true</static>
+      <pose>-5.72 12.48 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1258">
+      <static>true</static>
+      <pose>-7.72 12.48 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1268">
+      <static>true</static>
+      <pose>-9.72 12.935 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1288">
+      <static>true</static>
+      <pose>-0.25 -14.3 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1298">
+      <static>true</static>
+      <pose>-0.78 12.48 0 0 0 0</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+<model name="wall1308">
+      <static>true</static>
+      <pose>-11.76 13.9075 0 0 0 -1.5708</pose>
+      <link name="wall_link">
+        <inertial>
+          <mass>10000</mass>
+        </inertial>
+        <collision name="wall_collision">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="wall_visual">
+          <geometry>
+            <cylinder>
+            <radius>0.05</radius>
+            <length>0.001</length>
+          </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

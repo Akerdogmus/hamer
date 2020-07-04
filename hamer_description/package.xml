@@ -1,0 +1,27 @@
+<package format="2">
+  <name>hamer_description</name>
+  <version>1.0.0</version>
+  <description>
+    <p>URDF Description package for hamer</p>
+    <p>This package contains configuration data, 3D models and launch files
+for hamer robot</p>
+  </description>
+  <maintainer email="akerdogmus@gmail.com">AKE</maintainer>
+  
+  <author email="hcskn00@gmail.com">Harun Coskun</author>
+  <author email="akerdogmus@gmail.com">AKE</author>
+  
+  <license>TODO</license>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roslaunch</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>gazebo</depend>
+  <depend>urdf</depend>
+  <depend>xacro</depend>
+  <export>
+    <architecture_independent />
+  </export>
+</package>
