@@ -20,6 +20,8 @@ Gazebo Launching:
     $ roslaunch hamer_simulation hamer_gazebo.launch
     or
     $ roslaunch hamer_simulation hamer_gazebo_emptyworld.launch
+    or
+    $ roslaunch hamer_simulation hamer_gazebo_maze.launch
 
 SLAM Launching:
 
@@ -67,6 +69,7 @@ Update v1.1 - 21.08.20
 ------------------------
 - Added Gazebo Sonar Plugins (Now Sonar Sensors available)
 - Added hamer_navigation subpackage (Now navigation tools and 2d nav goal available)
+- Added new Gazebo maps and launch files
 
 ---------------------------------------------------------------------------------
 Extras:
