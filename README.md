@@ -54,11 +54,11 @@ Requirements:
 ---------------------------------------------------------------------------------
 Changelog:
 ----------
-# Update v1.0 - 02.08.20
+Update v1.0 - 02.08.20
 ------------------------
 - First version
 
-# Update v1.1 - 21.08.20
+Update v1.1 - 21.08.20
 ------------------------
 - Added Gazebo Sonar Plugins (Now Sonar Sensors available)
 
