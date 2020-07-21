@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+
+<launch>
+	
+	<!-- Hamer_Mini RobotModel Constants -->
+  	<arg name="model" value="$(find hamer_description)/urdf/hamer.urdf"/>
+  	<arg name="x_pos" default="-7.0"/>
+  	<arg name="y_pos" default="-1.0"/>
+  	<arg name="z_pos" default="1.0"/>
+	
+	<!-- We resume the logic in gazebo_ros package empty_world.launch, changing only the name of the world to be launched -->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+	   <arg name="world_name" value="$(find hamer_simulation)/worlds/Hamer_playground.sdf"/>
+	
+	   <arg name="paused" default="false"/>
+	   <arg name="use_sim_time" default="true"/>
+	   <arg name="gui" default="true"/>
+	   <arg name="headless" default="false"/>
+	   <arg name="debug" default="false"/>
+
+	</include>
+
+	<!-- Spawn hamer_mini into Gazebo -->
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find hamer_description)/urdf/hamer.urdf" />
+	<node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf" args="-urdf -model hamer -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+
+
+	<!-- Robot State Publisher -->
+    	<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+       		<param name="publish_frequency" type="double" value="30.0"/>
+     	</node>
+	
+	<!-- Joint State Publisher -->
+	<node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+
+</launch>
