@@ -1,4 +1,4 @@
-# Halikarnas Modular Education Robot (HAMER) - Version 1.1.0 - (First Upload: 02.08.20)
+# Halikarnas Modular Education Robot (HAMER) - Version 1.1.0
 HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
 
@@ -28,6 +28,11 @@ SLAM Launching:
 Teleop Launching:
 
     $ rosrun hamer_teleop hamer_teleop.py
+
+Navigation Launching (Added v1.1):
+
+    $ roslaunch hamer_navigation hamer_navigation.launch
+    $ rosrun rviz rviz (for seeing navigation components)
  
 NOTE: Before running keyboard code, run on terminal this codes:
         
@@ -61,6 +66,7 @@ Update v1.0 - 02.08.20
 Update v1.1 - 21.08.20
 ------------------------
 - Added Gazebo Sonar Plugins (Now Sonar Sensors available)
+- Added hamer_navigation subpackage (Now navigation tools and 2d nav goal available)
 
 ---------------------------------------------------------------------------------
 Extras:
@@ -71,6 +77,13 @@ Extras:
       
 ----------------------------------------------------------------------------------
 
-Contributors
+Maintainer
 --------------
-- Alim Kerem Erdoğmuş
+- Alim Kerem Erdoğmuş - https://www.linkedin.com/in/alim-kerem-erdogmus/
+
+Contributors
+------------
+- Enes YAZ - https://www.linkedin.com/in/enes-yaz/
+- Harun ÇOŞKUN - https://www.linkedin.com/in/harun-%C3%A7o%C5%9Fkun-91a579159/
+- Berkay YAŞAR - https://www.linkedin.com/in/efecan-berkay-yasar/
+- Samet AYDOĞAN
