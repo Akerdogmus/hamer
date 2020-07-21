@@ -1,0 +1,13 @@
+local_costmap:
+  global_frame: /mota1/odom
+  robot_base_frame: /mota1/baseOfMecanumWheel_link
+  update_frequency: 5.0
+  publish_frequency: 5.0
+  width: 3.0
+  height: 3.0
+  resolution: 0.01
+  static_map: false
+  rolling_window: true
+  transform_tolerance: 1.0
+  cost_scaling_factor: 0.5
+  inflation_radius: 0.1

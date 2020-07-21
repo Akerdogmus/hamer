@@ -1,0 +1,10 @@
+robot_radius: 0.14
+# obstacle_range: 1.0
+# raytrace_range: 2.0
+observation_sources: laser_scan
+laser_scan:
+  sensor_frame: /mota1/laser_link
+  data_type: LaserScan
+  topic: /mota1/laser
+  marking: true
+  clearing: true
