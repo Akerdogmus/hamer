@@ -83,7 +83,7 @@ Maintainer
 
 Contributors
 ------------
-- Enes YAZ - https://www.linkedin.com/in/enes-yaz/
-- Harun ÇOŞKUN - https://www.linkedin.com/in/harun-%C3%A7o%C5%9Fkun-91a579159/
-- Berkay YAŞAR - https://www.linkedin.com/in/efecan-berkay-yasar/
+- Enes YAZ - Navigation Subpackage Designing - https://www.linkedin.com/in/enes-yaz/
+- Harun ÇOŞKUN - HAMER Robot Model Designing - https://www.linkedin.com/in/harun-%C3%A7o%C5%9Fkun-91a579159/
+- Berkay YAŞAR - Map Designing - https://www.linkedin.com/in/efecan-berkay-yasar/
 - Samet AYDOĞAN
