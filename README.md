@@ -1,4 +1,4 @@
-# Halikarnas Modular Education Robot (HAMER) - Version 1.0.0 - 02.08.20
+# Halikarnas Modular Education Robot (HAMER) - Version 1.1.0 - (First Upload: 02.08.20)
 HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
 
@@ -52,12 +52,21 @@ Requirements:
         $ sudo apt install ros-melodic-joint-state-publisher-gui
         
 ---------------------------------------------------------------------------------
+Changelog:
+----------
+# Update v1.1 - 21.08.20
+------------------------
+- Added Gazebo Sonar Plugins (Now Sonar Sensors available)
+
+---------------------------------------------------------------------------------
 Extras:
 --------
 - If you want to control the robot with the help of an interface, not a terminal, you can install Robotic Controller Interface in your workspace.
 
       $ git clone https://github.com/Akerdogmus/Robotic_Controller_Interface 
       
+----------------------------------------------------------------------------------
+
 
 Contributors
 --------------
