@@ -54,6 +54,10 @@ Requirements:
 ---------------------------------------------------------------------------------
 Changelog:
 ----------
+# Update v1.0 - 02.08.20
+------------------------
+- First version
+
 # Update v1.1 - 21.08.20
 ------------------------
 - Added Gazebo Sonar Plugins (Now Sonar Sensors available)
@@ -66,7 +70,6 @@ Extras:
       $ git clone https://github.com/Akerdogmus/Robotic_Controller_Interface 
       
 ----------------------------------------------------------------------------------
-
 
 Contributors
 --------------
