@@ -2,6 +2,8 @@
 HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
 
+https://github.com/Akerdogmus/hamer/blob/master/hamer.png?raw=true
+
 - hamer_bringup: It is a subpackage containing hardware control of HAMER robot.
 - hamer_description: It is the subpackage containing urdf files of the HAMER robot.
 - hamer_navigation: It is the subpackage containing the navigation package files of the HAMER robot.
