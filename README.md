@@ -81,6 +81,8 @@ Extras:
 - If you want to control the robot with the help of an interface, not a terminal, you can install Robotic Controller Interface in your workspace.
 
       $ git clone https://github.com/Akerdogmus/Robotic_Controller_Interface 
+
+- HAMER Robots YouTube Channel: https://www.youtube.com/channel/UCJIAVXEoZ3Qzcn72Dd_9upg/featured?disable_polymer=1
       
 ----------------------------------------------------------------------------------
 
