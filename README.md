@@ -96,3 +96,4 @@ Contributors
 - Harun ÇOŞKUN - HAMER Robot Model Designer - https://www.linkedin.com/in/harun-%C3%A7o%C5%9Fkun-91a579159/
 - Berkay YAŞAR - Map Designer - https://www.linkedin.com/in/efecan-berkay-yasar/
 - Samet AYDOĞAN - http://www.linkedin.com/in/samet-aydogan
+- Muhammed KOCAOĞLU - https://www.linkedin.com/in/muhammed-kocaoğlu-2b661b178/
