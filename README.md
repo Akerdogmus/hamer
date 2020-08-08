@@ -1,4 +1,4 @@
-# Halikarnas Modular Education Robot (HAMER) - Version 1.1.0
+# Halikarnas Modular Education Robot (HAMER) - Version 1.2.0
 HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
 
@@ -36,7 +36,6 @@ Teleop Launching:
 Navigation Launching (Added v1.1):
 
     $ roslaunch hamer_navigation hamer_navigation.launch
-    $ rosrun rviz rviz (for seeing navigation components)
     
 ![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/master/hamer_2.png?raw=true)
  
@@ -62,6 +61,11 @@ Requirements:
         $ sudo apt update
         $ sudo apt install ros-melodic-joint-state-publisher-gui
         
+- In order for the navigation package to work, "follow_waypoint" package must be downloaded to your computer.
+(Waypoints package added and the default goal tolerance increased to 0.3 from 0.0 in phyton script to ease robot's movement.)
+
+        $ git clone https://github.com/danielsnider/follow_waypoints
+        
 ---------------------------------------------------------------------------------
 Changelog:
 ----------
@@ -74,6 +78,19 @@ Update v1.1 - 21.08.20
 - Added Gazebo Sonar Plugins (Now Sonar Sensors available)
 - Added hamer_navigation subpackage (Now navigation tools and 2d nav goal available)
 - Added new Gazebo maps and launch files
+
+Update v1.2 - 08.09.20
+----------------------
+"hamer_navigation" Package Changes:
+- base_local_planner parameters changed.
+- costmap_common_parameters new parameters added and existing upgraded.
+- Added new parameters for global_costmap and local costmap.
+- costmap_converter, teb_local_planner in param folder and cfg folder in navigation package removed.
+- navigation launch file: The param teb_local_planner is removed. Instead, TrajectoryPlannerRos used.
+- Rviz starting added to launch file.
+
+"hamer_teleop" Package Changes: 
+- for teleop operation Launch file added so only launch file is enough to use keyboard.
 
 ---------------------------------------------------------------------------------
 Extras:
@@ -96,4 +113,4 @@ Contributors
 - Harun ÇOŞKUN - HAMER Robot Model Designer - https://www.linkedin.com/in/harun-%C3%A7o%C5%9Fkun-91a579159/
 - Berkay YAŞAR - Test Maps Designer - https://www.linkedin.com/in/efecan-berkay-yasar/
 - Samet AYDOĞAN - http://www.linkedin.com/in/samet-aydogan
-- Muhammed KOCAOĞLU - https://www.linkedin.com/in/muhammed-kocaoğlu-2b661b178/
+- Muhammed KOCAOĞLU - Navigation Subpackage Designer - https://www.linkedin.com/in/muhammed-kocaoğlu-2b661b178/
