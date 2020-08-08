@@ -5,7 +5,7 @@
   <description>The hamer_bringup package.This package contains the content required to control the hamer hardware over ROS.</description>
 
   <maintainer email="akerdogmus@gmail.com">AKE</maintainer>
-  <license>TODO</license>
+  <license>MIT</license>
   <url type="website">https://github.com/Akerdogmus/hamer</url>
 
   <buildtool_depend>catkin</buildtool_depend>

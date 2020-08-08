@@ -1,6 +1,9 @@
 global_costmap:
   global_frame: map #costmap 'in hangi frame üzerinde çalıştıralacağı belirlenir.
   robot_base_frame: base_footprint
+  publish_frequency: 0.0
   update_frequency: 5.0 #Update_frequency" parametresi, costmap' in güncelleme döngüsünü çalıştıracağı frekansı Hz olarak belirler. Hataya göre tekrar bakılabilir.
-  static_map: true #Eğer map server tarafından sağlanılan bir harita varsa true yapılır.
   transform_tolerance: 0.5
+  static_map: true #Eğer map server tarafından sağlanılan bir harita varsa true yapılır.
+
+  resolution: 0.05
