@@ -61,7 +61,7 @@ Requirements:
         $ sudo apt update
         $ sudo apt install ros-melodic-joint-state-publisher-gui
         
-- In order for the navigation package to work, "follow_waypoint" package must be downloaded to your computer.
+- In order for the navigation package to work, "follow_waypoint" package must be downloaded to your workspace.
 (Waypoints package added and the default goal tolerance increased to 0.3 from 0.0 in phyton script to ease robot's movement.)
 
         $ git clone https://github.com/danielsnider/follow_waypoints
