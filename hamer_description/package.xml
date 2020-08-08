@@ -11,7 +11,7 @@ for hamer robot</p>
   <author email="hcskn00@gmail.com">Harun Coskun</author>
   <author email="akerdogmus@gmail.com">AKE</author>
   
-  <license>TODO</license>
+  <license>MIT</license>
   
   <buildtool_depend>catkin</buildtool_depend>
   <depend>roslaunch</depend>

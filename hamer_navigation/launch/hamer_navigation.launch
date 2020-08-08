@@ -1,8 +1,11 @@
 <launch>
 
+  <!-- Arguments -->
+  <arg name="open_rviz" default="true"/>
+
    <master auto="start"/>
  <!-- Run the map server --> 
-    <node pkg="map_server" type="map_server" name="mymap_server" args="$(find hamer_navigation)/maps/map.yaml"/>
+    <node pkg="map_server" type="map_server" name="map_server" args="$(find hamer_navigation)/maps/map.yaml"/>
 
  <!--- Run AMCL --> 
     <include file="$(find hamer_navigation)/launch/amcl.launch"/>
@@ -14,12 +17,21 @@
     <rosparam file="$(find hamer_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
     <rosparam file="$(find hamer_navigation)/param/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find hamer_navigation)/param/global_costmap_params.yaml" command="load" /> 
-    <rosparam file="$(find hamer_navigation)/param/base_local_planner_params.yaml" command="load" /> 
-<!--    <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" /> -->
+     <rosparam file="$(find hamer_navigation)/param/base_local_planner_params.yaml" command="load" />
+
+    <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS" />
+
     
     <remap from="cmd_vel" to="/hamer/cmd_vel"/> 
     <remap from="odom" to="/hamer/odom"/>
-<!--    <param name="controller_frequency" value="10.0" /> -->
+
  </node>
+
+<!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find hamer_navigation)/rviz/hamer_navigation.rviz"/>
+  </group>
+
 
 </launch> 

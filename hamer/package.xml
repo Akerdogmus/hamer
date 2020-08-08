@@ -5,7 +5,7 @@
   <description>
     ROS packages for the hamer robot's (meta package)
   </description>
-  <license>TODO</license>
+  <license>MIT</license>
  
   <maintainer email="akerdogmus@gmail.com">AKE</maintainer>
   <url type="repository">https://github.com/Akerdogmus/hamer</url>

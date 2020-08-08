@@ -3,12 +3,12 @@
 obstacle_range: 3.5 #Sadece bu değer içindeki engelleri günceller
 raytrace_range: 3.0
 
-#footprint: [[-0.14, 0.1], [0.14, 0.1], [0.14, -0.1], [-0.14, -0.1]]
-footprint: [[0, 0.12], [0, -0.12], [0.16, -0.12], [0.16, 0.12]]  
-#robot_radius: ir_of_robot
-inflation_radius: 0.5 #Örneğin, şişirme yarıçapının 0,55 metreye ayarlanması, robotun engellerden 0,55 metre veya daha fazla kalan tüm yollara eşit engel maliyetine sahip olacağı anlamına gelir.
+footprint: [[0.05, 0.025], [0.05, -0.025], [0.11, 0.025], [0.11, -0.025]] 
+footprint_padding: 0.01
+# robot_radius: 0.46  ---only be set for circular robots---
+inflation_radius: 0.55 #Örneğin, şişirme yarıçapının 0,55 metreye ayarlanması, robotun engellerden 0,55 metre veya daha fazla kalan tüm yollara eşit engel maliyetine sahip olacağı anlamına gelir.
 
-observation_sources: laser_scan_sensor 
+observation_sources: laser_scan_sensor point_cloud_sensor
 
 laser_scan_sensor: {sensor_frame: lidar_scan, data_type: LaserScan, topic: scan, marking: true, clearing: true} #marking, sensörün costmap 'e bilgi eklemesi için kullanıp kullanılmayacağını, clearing, costmap 'den engel bilgisini kaldırmak için ?
 

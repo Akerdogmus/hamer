@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+
+<launch>
+	<node name="hamer_teleop" pkg="hamer_teleop" type="hamer_teleop.py" output="screen" />
+
+</launch>

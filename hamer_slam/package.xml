@@ -5,7 +5,7 @@
   <description>
     The hamer_slam package provides roslaunch scripts for starting the SLAM.
   </description>
-  <license>TODO</license>
+  <license>MIT</license>
   <author email="akerdogmus@gmail.com">AKE</author>
   <maintainer email="akerdogmus@gmail.com">AKE</maintainer>
   <url type="repository">https://github.com/Akerdogmus/hamer</url>
