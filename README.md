@@ -111,6 +111,6 @@ Contributors
 ------------
 - Enes YAZ - Navigation Subpackage Designer - https://www.linkedin.com/in/enes-yaz/
 - Harun ÇOŞKUN - HAMER Robot Model Designer - https://www.linkedin.com/in/harun-%C3%A7o%C5%9Fkun-91a579159/
-- Berkay YAŞAR - Test Maps Designer - https://www.linkedin.com/in/efecan-berkay-yasar/
+- Berkay YAŞAR -Test Maps Designer - https://www.linkedin.com/in/efecan-berkay-yasar/
 - Samet AYDOĞAN - http://www.linkedin.com/in/samet-aydogan
 - Muhammed KOCAOĞLU - Navigation Subpackage Designer - https://www.linkedin.com/in/muhammed-kocaoğlu-2b661b178/
