@@ -114,3 +114,7 @@ Contributors
 - Berkay YAŞAR -Test Maps Designer - https://www.linkedin.com/in/efecan-berkay-yasar/
 - Samet AYDOĞAN - http://www.linkedin.com/in/samet-aydogan
 - Muhammed KOCAOĞLU - Navigation Subpackage Designer - https://www.linkedin.com/in/muhammed-kocaoğlu-2b661b178/
+
+Supervisor
+------------
+- Muhammed Oğuz TAŞ - https://www.linkedin.com/in/moguztas/
