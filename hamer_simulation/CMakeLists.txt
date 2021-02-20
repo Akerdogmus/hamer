@@ -37,5 +37,5 @@ install(DIRECTORY include/${PROJECT_NAME}/
 
 install(DIRECTORY launch models rviz worlds 
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
-)
+) 
 
