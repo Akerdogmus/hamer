@@ -91,7 +91,12 @@ Update v1.2 - 08.09.20
 
 "hamer_teleop" Package Changes: 
 - for teleop operation Launch file added so only launch file is enough to use keyboard.
-
+---------------------------------------------------------------------------------
+Future Works:
+-------------
+Next Update v1.3
+----------------
+- HAMER ROS Noetic version.
 ---------------------------------------------------------------------------------
 Extras:
 --------
