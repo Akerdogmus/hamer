@@ -23,7 +23,7 @@ ROS Noetic version:
 
     $ git clone https://github.com/Akerdogmus/hamer -b noetic-devel
 
-Some HAMER Using Commands:
+Some HAMER ROS Commands:
 ---------------------
 Rviz Launching:
 
