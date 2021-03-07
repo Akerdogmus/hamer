@@ -13,6 +13,11 @@ This metapackage includes the following subpackages.
 
 For HAMER_mini model : https://github.com/Akerdogmus/HAMER_mini
 
+Next Update v1.3 - 07.03.21
+-------------------------------
+- https://github.com/Akerdogmus/hamer/tree/noetic-devel
+
+
 Rviz Launching:
 
     $ roslaunch hamer_simulation hamer_rviz.launch
@@ -92,9 +97,6 @@ Update v1.2 - 08.09.20
 "hamer_teleop" Package Changes: 
 - for teleop operation Launch file added so only launch file is enough to use keyboard.
 ---------------------------------------------------------------------------------
-Next Update v1.3 - 07.03.21
--------------------------------
-- https://github.com/Akerdogmus/hamer/noetic-devel
 
 Extras:
 --------
