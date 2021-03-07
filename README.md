@@ -37,7 +37,7 @@ Navigation Launching (Added v1.1):
 
     $ roslaunch hamer_navigation hamer_navigation.launch
     
-![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/master/hamer_2.png?raw=true)
+![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/noetic-devel/hamer_2.png?raw=true)
  
 NOTE: Before running keyboard code, run on terminal this codes:
         
