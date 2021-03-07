@@ -29,7 +29,7 @@ Rviz Launching:
 
     $ roslaunch hamer_simulation hamer_rviz.launch
     
-Solo-Rviz Launching (Added v1.3 Update):
+Solo-Rviz Launching (v1.3 Update):
 
     $ roslaunch hamer_simulation hamer_rviz_standalone.launch
     
