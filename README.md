@@ -2,7 +2,7 @@
 HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
 
-![Image of HAMER](https://github.com/Akerdogmus/hamer/blob/master/hamer.png?raw=true)
+![Image of HAMER](https://github.com/Akerdogmus/hamer/blob/melodic-devel/hamer.png?raw=true)
 
 - hamer_bringup: It is a subpackage containing hardware control of HAMER robot.
 - hamer_description: It is the subpackage containing urdf files of the HAMER robot.
@@ -37,7 +37,7 @@ Navigation Launching (Added v1.1):
 
     $ roslaunch hamer_navigation hamer_navigation.launch
     
-![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/master/hamer_2.png?raw=true)
+![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/melodic-devel/hamer_2.png?raw=true)
  
 NOTE: Before running keyboard code, run on terminal this codes:
         
