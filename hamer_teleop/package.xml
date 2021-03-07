@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>hamer_teleop</name>
-  <version>1.0.0</version>
+  <version>1.2.0</version>
   <description>The hamer_teleop package. This package contains keyboard control codes developed for hamer.</description>
 
   <maintainer email="akerdogmus@gmail.com">AKE</maintainer>

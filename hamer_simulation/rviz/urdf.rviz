@@ -62,7 +62,40 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
+        Frame_Camera_RGB:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Frame_Camera_RGB_Optic:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Left_Back:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Left_Front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         Link Tree Style: Links in Alphabetic Order
+        Right_Back:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Right_Front:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
@@ -73,36 +106,21 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        dummy:
+        imu_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        laser_platform_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_back_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_front_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_back_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_front_wheel:
+        lidar_scan:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         sonar_back:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        sonar_front:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -113,11 +131,6 @@ Visualization Manager:
           Show Trail: false
           Value: true
         sonar_right:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        tfmini_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -156,12 +169,13 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.47065967321395874
+      Distance: 0.9289987683296204
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
+      Field of View: 0.7853981852531433
       Focal Point:
         X: -0.047639936208724976
         Y: -0.014917206950485706
@@ -171,10 +185,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5747972726821899
+      Pitch: 0.1147974506020546
       Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 0.13539542257785797
+      Yaw: 0.2053954303264618
     Saved: ~
 Window Geometry:
   Displays:

@@ -1,6 +1,6 @@
 <package format="2">
   <name>hamer_description</name>
-  <version>1.0.0</version>
+  <version>1.2.0</version>
   <description>
     <p>URDF Description package for hamer</p>
     <p>This package contains configuration data, 3D models and launch files
