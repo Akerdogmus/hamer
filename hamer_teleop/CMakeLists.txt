@@ -18,7 +18,7 @@ catkin_package(
 
 ## Mark executable scripts (Python etc.) for installation
 install(PROGRAMS
-  scripts/hamer_keyboard
+  scripts/hamer_keyboard.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

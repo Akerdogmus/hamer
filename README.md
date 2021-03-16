@@ -1,8 +1,8 @@
-# Halikarnas Modular Education Robot (HAMER) - Version 1.3.0
-HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic (branch: melodic-devel) and ROS Noetic (branch: noeitc-devel) compatible robot packages of HAMER robot.
+# Halikarnas Modular Education Robot (HAMER) - Version 1.2.0
+HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
 
-![Image of HAMER](https://github.com/Akerdogmus/hamer/blob/noetic-devel/hamer.png?raw=true)
+![Image of HAMER](https://github.com/Akerdogmus/hamer/blob/master/hamer.png?raw=true)
 
 - hamer_bringup: It is a subpackage containing hardware control of HAMER robot.
 - hamer_description: It is the subpackage containing urdf files of the HAMER robot.
@@ -13,25 +13,9 @@ This metapackage includes the following subpackages.
 
 For HAMER_mini model : https://github.com/Akerdogmus/HAMER_mini
 
-HAMER Installation:
--------------------
-ROS Melodic version:
-
-    $ git clone https://github.com/Akerdogmus/hamer -b melodic-devel
-
-ROS Noetic version:
-
-    $ git clone https://github.com/Akerdogmus/hamer -b noetic-devel
-
-Some HAMER ROS Commands:
----------------------
 Rviz Launching:
 
     $ roslaunch hamer_simulation hamer_rviz.launch
-    
-Solo-Rviz Launching (v1.3 Update):
-
-    $ roslaunch hamer_simulation hamer_rviz_standalone.launch
     
 Gazebo Launching:
 
@@ -53,7 +37,7 @@ Navigation Launching (Added v1.1):
 
     $ roslaunch hamer_navigation hamer_navigation.launch
     
-![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/noetic-devel/hamer_2.png?raw=true)
+![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/master/hamer_2.png?raw=true)
  
 NOTE: Before running keyboard code, run on terminal this codes:
         
@@ -66,11 +50,11 @@ Requirements:
 
 - In order for the sensors to work properly, "gazebo_ros_pkgs" files must be downloaded to your workspace.
 
-        $ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b noetic-devel
+        $ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b melodic-devel
         
 - In order for the SLAM to work, "slam_gmapping" package must be downloaded to your workspace.
     
-        $ git clone https://github.com/ros-perception/slam_gmapping.git -b noetic-devel
+        $ git clone https://github.com/ros-perception/slam_gmapping.git -b melodic-devel
         
 - In order for the "joint_state_publisher" to work, "joint_state_publisher_gui" package must be downloaded to your computer.
 
@@ -105,13 +89,14 @@ Update v1.2 - 08.09.20
 - navigation launch file: The param teb_local_planner is removed. Instead, TrajectoryPlannerRos used.
 - Rviz starting added to launch file.
 
-Update v1.3 - 07.03.21
-----------------------
-- HAMER is now ROS Noetic compatible.
-- "hamer_rviz_standalone.launch" file added (For using HAMER Rviz without Gazebo working)
-
 "hamer_teleop" Package Changes: 
 - for teleop operation Launch file added so only launch file is enough to use keyboard.
+---------------------------------------------------------------------------------
+Future Works:
+-------------
+Next Update v1.3 - Coming Soon.
+-------------------------------
+- HAMER ROS Noetic version.
 ---------------------------------------------------------------------------------
 Extras:
 --------
