@@ -142,5 +142,5 @@ Contributors
 - Yağız UMUR - Experiments and Interface Designer - https://www.linkedin.com/in/ya%C4%9F%C4%B1z-umur-100721209/
 - Berkay YARIŞ - Experiments and Interface Designer - https://www.linkedin.com/in/berkay-yari%C5%9F-33741a147/
 Supervisor
-------------.
+------------
 - Muhammed Oğuz TAŞ - https://www.linkedin.com/in/moguztas/
