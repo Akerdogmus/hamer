@@ -141,6 +141,7 @@ Contributors
 - Fatih VATANSEVER - Experiments and Interface Designer - https://www.linkedin.com/in/fatihvatansever/
 - Yağız UMUR -  Experiments and Interface Designer - https://www.linkedin.com/in/yagizumur/
 - Berkay YARIŞ - Experiments and Interface Designer - https://www.linkedin.com/in/berkayyaris/
+
 Supervisor
 ------------
 - Muhammed Oğuz TAŞ - https://www.linkedin.com/in/moguztas/
