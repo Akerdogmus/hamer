@@ -23,67 +23,94 @@ git clone https://github.com/Akerdogmus/hamer -b melodic-devel
 
 ROS Noetic version:
 
-    $ git clone https://github.com/Akerdogmus/hamer -b noetic-devel
+```bash
+git clone https://github.com/Akerdogmus/hamer -b noetic-devel
+```
 
 Some HAMER ROS Commands:
 ---------------------
 Rviz Launching:
 
-    $ roslaunch hamer_simulation hamer_rviz.launch
-    
+```bash
+roslaunch hamer_simulation hamer_rviz.launch
+```
+
 Solo-Rviz Launching (v1.3 Update):
 
-    $ roslaunch hamer_simulation hamer_rviz_standalone.launch
-    
+```bash
+roslaunch hamer_simulation hamer_rviz_standalone.launch
+```
+
 Gazebo Launching:
 
-    $ roslaunch hamer_simulation hamer_gazebo.launch
-    or
-    $ roslaunch hamer_simulation hamer_gazebo_emptyworld.launch
-    or
-    $ roslaunch hamer_simulation hamer_gazebo_maze.launch
+```bash
+roslaunch hamer_simulation hamer_gazebo.launch
+```
+or
+
+```bash
+roslaunch hamer_simulation hamer_gazebo_emptyworld.launch
+```
+or
+
+```bash    
+roslaunch hamer_simulation hamer_gazebo_maze.launch
+```
 
 SLAM Launching:
 
-    $ roslaunch hamer_slam hamer_slam.launch
-    
+```bash
+roslaunch hamer_slam hamer_slam.launch
+```
+
 Teleop Launching:
 
-    $ rosrun hamer_teleop hamer_teleop.py
+```bash
+rosrun hamer_teleop hamer_teleop.py
+```
 
 Navigation Launching (Added v1.1):
 
-    $ roslaunch hamer_navigation hamer_navigation.launch
-    
+```bash
+roslaunch hamer_navigation hamer_navigation.launch
+```
+
 ![Image of HAMER_2](https://github.com/Akerdogmus/hamer/blob/noetic-devel/hamer_2.png?raw=true)
  
 NOTE: Before running keyboard code, run on terminal this codes:
-        
-        $ cd ~/hamer_teleop/scripts
-        $ chmod +x hamer_teleop.py
-    
+
+```bash        
+cd ~/hamer_teleop/scripts && chmod +x hamer_teleop.py
+```
 ------------------------------------------------------------------------------
 Requirements:
 --------------
 
 - In order for the sensors to work properly, "gazebo_ros_pkgs" files must be downloaded to your workspace.
 
-        $ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b noetic-devel
-        
+```bash
+git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b noetic-devel
+```
+
 - In order for the SLAM to work, "slam_gmapping" package must be downloaded to your workspace.
-    
-        $ git clone https://github.com/ros-perception/slam_gmapping.git -b noetic-devel
-        
+
+```bash    
+git clone https://github.com/ros-perception/slam_gmapping.git -b noetic-devel
+```
+
 - In order for the "joint_state_publisher" to work, "joint_state_publisher_gui" package must be downloaded to your computer.
 
-        $ sudo apt update
-        $ sudo apt install ros-melodic-joint-state-publisher-gui
-        
+```bash
+sudo apt update && sudo apt install ros-melodic-joint-state-publisher-gui
+```
+
 - In order for the navigation package to work, "follow_waypoint" package must be downloaded to your workspace.
 (Waypoints package added and the default goal tolerance increased to 0.3 from 0.0 in phyton script to ease robot's movement.)
 
-        $ git clone https://github.com/danielsnider/follow_waypoints
-        
+```bash
+git clone https://github.com/danielsnider/follow_waypoints
+```
+
 ---------------------------------------------------------------------------------
 Changelog:
 ----------
@@ -123,7 +150,9 @@ Extras:
 --------
 - If you want to control the robot with the help of an interface, not a terminal, you can install Robotic Controller Interface in your workspace.
 
-      $ git clone https://github.com/Akerdogmus/Robotic_Controller_Interface 
+```bash
+git clone https://github.com/Akerdogmus/Robotic_Controller_Interface 
+```
 
 - HAMER Robots YouTube Channel: https://www.youtube.com/channel/UCJIAVXEoZ3Qzcn72Dd_9upg/featured?disable_polymer=1
       
