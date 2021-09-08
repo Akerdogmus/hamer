@@ -17,7 +17,9 @@ HAMER Installation:
 -------------------
 ROS Melodic version:
 
-    $ git clone https://github.com/Akerdogmus/hamer -b melodic-devel
+```bash
+git clone https://github.com/Akerdogmus/hamer -b melodic-devel
+```
 
 ROS Noetic version:
 
