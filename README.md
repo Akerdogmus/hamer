@@ -149,6 +149,15 @@ Update v1.3.1 - 16.03.21
 ------------------------
 - Some bug and file fixes.
 ---------------------------------------------------------------------------------
+Roadmap:
+--------
+* [x] Hamer Navigation subpackage
+* [x] New Gazebo Maps
+* [x] Hamer ROS Noetic version
+* [ ] Hamer ROS2 version
+* [ ] New Hamer robot model
+* [ ] All Hamer subpackage rework
+
 Extras:
 --------
 - If you want to control the robot with the help of an interface, not a terminal, you can install Robotic Controller Interface in your workspace.
