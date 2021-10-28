@@ -29,7 +29,35 @@ ROS Noetic version:
 ```bash
 git clone https://github.com/Akerdogmus/hamer -b noetic-devel
 ```
+------------------------------------------------------------------------------
+Requirements:
+--------------
 
+- In order for the sensors to work properly, "gazebo_ros_pkgs" files must be downloaded to your workspace.
+
+```bash
+git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b noetic-devel
+```
+
+- In order for the SLAM to work, "slam_gmapping" package must be downloaded to your workspace.
+
+```bash    
+git clone https://github.com/ros-perception/slam_gmapping.git -b noetic-devel
+```
+
+- In order for the "joint_state_publisher" to work, "joint_state_publisher_gui" package must be downloaded to your computer.
+
+```bash
+sudo apt update && sudo apt install ros-melodic-joint-state-publisher-gui
+```
+
+- In order for the navigation package to work, "follow_waypoint" package must be downloaded to your workspace.
+(Waypoints package added and the default goal tolerance increased to 0.3 from 0.0 in phyton script to ease robot's movement.)
+
+```bash
+git clone https://github.com/danielsnider/follow_waypoints
+```
+---------------------------------------------------------------------------------
 Some HAMER ROS Commands:
 ---------------------
 Rviz Launching:
@@ -85,35 +113,6 @@ NOTE: Before running keyboard code, run on terminal this codes:
 ```bash        
 cd ~/hamer_teleop/scripts && chmod +x hamer_teleop.py
 ```
-------------------------------------------------------------------------------
-Requirements:
---------------
-
-- In order for the sensors to work properly, "gazebo_ros_pkgs" files must be downloaded to your workspace.
-
-```bash
-git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b noetic-devel
-```
-
-- In order for the SLAM to work, "slam_gmapping" package must be downloaded to your workspace.
-
-```bash    
-git clone https://github.com/ros-perception/slam_gmapping.git -b noetic-devel
-```
-
-- In order for the "joint_state_publisher" to work, "joint_state_publisher_gui" package must be downloaded to your computer.
-
-```bash
-sudo apt update && sudo apt install ros-melodic-joint-state-publisher-gui
-```
-
-- In order for the navigation package to work, "follow_waypoint" package must be downloaded to your workspace.
-(Waypoints package added and the default goal tolerance increased to 0.3 from 0.0 in phyton script to ease robot's movement.)
-
-```bash
-git clone https://github.com/danielsnider/follow_waypoints
-```
-
 ---------------------------------------------------------------------------------
 Changelog:
 ----------
