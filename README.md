@@ -42,7 +42,7 @@ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b noetic-devel
 - In order for the SLAM to work, "slam_gmapping" package must be downloaded to your workspace.
 
 ```bash    
-git clone https://github.com/ros-perception/slam_gmapping.git -b noetic-devel
+git clone https://github.com/ros-perception/slam_gmapping.git -b melodic-devel
 ```
 
 - In order for the "joint_state_publisher" to work, "joint_state_publisher_gui" package must be downloaded to your computer.
