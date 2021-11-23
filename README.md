@@ -187,3 +187,7 @@ Contributors
 Supervisor
 ------------
 - Muhammed Oğuz TAŞ - https://www.linkedin.com/in/moguztas/
+
+## License
+
+This library is available to anybody free of charge, under the terms of MIT License (see LICENSE).
