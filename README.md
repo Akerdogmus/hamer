@@ -180,9 +180,9 @@ Contributors
 - Berkay YAŞAR -Test Maps Designer - https://www.linkedin.com/in/efecan-berkay-yasar/
 - Samet AYDOĞAN - http://www.linkedin.com/in/samet-aydogan
 - Muhammed KOCAOĞLU - Navigation Subpackage Designer - https://www.linkedin.com/in/muhammed-kocaoğlu-2b661b178/
-- Fatih VATANSEVER - Experiments and Interface Designer - https://www.linkedin.com/in/fatihvatansever/
-- Yağız UMUR -  Experiments and Interface Designer - https://www.linkedin.com/in/yagizumur/
-- Berkay YARIŞ - Experiments and Interface Designer - https://www.linkedin.com/in/berkayyaris/
+- Fatih VATANSEVER - https://www.linkedin.com/in/fatihvatansever/
+- Yağız UMUR - https://www.linkedin.com/in/yagizumur/
+- Berkay YARIŞ - https://www.linkedin.com/in/berkayyaris/
 
 Supervisor
 ------------
