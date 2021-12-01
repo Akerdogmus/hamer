@@ -190,4 +190,4 @@ Supervisor
 
 ## License
 
-This library is available to anybody free of charge, under the terms of MIT License (see LICENSE).
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
