@@ -123,3 +123,7 @@ Contributors
 Supervisor
 ------------
 - Muhammed Oğuz TAŞ - https://www.linkedin.com/in/moguztas/
+
+## License
+
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
