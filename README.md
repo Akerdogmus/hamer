@@ -1,4 +1,5 @@
-# Halikarnas Modular Education Robot (HAMER) - Version 1.3.1 &nbsp; ![](https://img.shields.io/github/forks/Akerdogmus/hamer?style=social) ![](https://img.shields.io/github/stars/Akerdogmus/hamer?style=social) ![](https://img.shields.io/github/watchers/Akerdogmus/hamer?style=social) <br>
+# Halikarnas Modular Education Robot (HAMER) 
+
 ![current_version](https://img.shields.io/github/v/release/Akerdogmus/hamer?color=green) ![last_commit](https://img.shields.io/github/last-commit/Akerdogmus/hamer) ![ros_dist](https://img.shields.io/badge/ros--dist-noetic-blue) ![](https://img.shields.io/github/repo-size/Akerdogmus/hamer) ![Apache-2.0 License](https://img.shields.io/github/license/inomuh/Camera-Fault-Injection-Tool?color=blue) ![](https://img.shields.io/github/contributors/Akerdogmus/hamer)
 
 HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic (branch: melodic-devel) and ROS Noetic (branch: noeitc-devel) compatible robot packages of HAMER robot.
