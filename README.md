@@ -2,7 +2,7 @@
 
 ![current_version](https://img.shields.io/github/v/release/Akerdogmus/hamer?color=green) ![last_commit](https://img.shields.io/github/last-commit/Akerdogmus/hamer) ![ros_dist](https://img.shields.io/badge/ros--dist-noetic/melodic-blue)  ![](https://img.shields.io/github/repo-size/Akerdogmus/hamer) ![Apache-2.0 License](https://img.shields.io/github/license/inomuh/Camera-Fault-Injection-Tool?color=blue) ![](https://img.shields.io/github/contributors/Akerdogmus/hamer)
 
-HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic (branch: melodic-devel) and ROS Noetic (branch: noeitc-devel) compatible robot packages of HAMER robot.
+HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic (branch: melodic-devel) and ROS Noetic (branch: noetic-devel) compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
 
 ![Image of HAMER](https://github.com/Akerdogmus/hamer/blob/noetic-devel/hamer.png?raw=true)
