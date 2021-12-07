@@ -1,6 +1,6 @@
 # Halikarnas Modular Education Robot (HAMER) 
 
-![current_version](https://img.shields.io/github/v/release/Akerdogmus/hamer?color=green) ![last_commit](https://img.shields.io/github/last-commit/Akerdogmus/hamer) ![ros_dist](https://img.shields.io/badge/ros--dist-noetic/melodic-blue)  ![](https://img.shields.io/github/repo-size/Akerdogmus/hamer) ![Apache-2.0 License](https://img.shields.io/github/license/inomuh/Camera-Fault-Injection-Tool?color=blue) ![](https://img.shields.io/github/contributors/Akerdogmus/hamer) ![lang](https://img.shields.io/github/languages/top/Akerdogmus/hamer)
+![current_version](https://img.shields.io/github/v/release/Akerdogmus/hamer?color=green) ![last_commit](https://img.shields.io/github/last-commit/Akerdogmus/hamer) ![ros_dist](https://img.shields.io/badge/ros--dist-noetic/melodic-blue)  ![](https://img.shields.io/github/repo-size/Akerdogmus/hamer) ![Apache-2.0 License](https://img.shields.io/github/license/inomuh/Camera-Fault-Injection-Tool?color=blue) ![](https://img.shields.io/github/contributors/Akerdogmus/hamer) ![lang](https://img.shields.io/github/languages/top/Akerdogmus/hamer) [![CodeFactor](https://www.codefactor.io/repository/github/akerdogmus/hamer/badge)](https://www.codefactor.io/repository/github/akerdogmus/hamer)
 
 HAMER is a robotic project that is being developed for robotic education. This repository contains ROS Melodic (branch: melodic-devel) and ROS Noetic (branch: noetic-devel) compatible robot packages of HAMER robot.
 This metapackage includes the following subpackages.
